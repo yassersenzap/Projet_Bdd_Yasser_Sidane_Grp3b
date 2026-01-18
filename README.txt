@@ -1,56 +1,40 @@
-========================================================================
-PROJET : BookFlow - Système de Gestion de Librairie
-MODULE : Bases de Données
-FILIÈRE : LST - Système d’Information et Transformation Digitale (SITD)
-ÉTUDIANT : Yasser Sidane
-FST Settat - Université Hassan 1er
-ENCADRANT : M. Lakhdissi
-========================================================================
+# 📚 BookFlow — Système de Gestion de Librairie (SITD)
+## 📖 Présentation du Projet
+**BookFlow** est une infrastructure de base de données relationnelle avancée conçue pour la gestion d'une librairie moderne. Ce projet a été réalisé dans le cadre du module **Bases de Données** de la licence **SITD (Systèmes d'Information et Transformation Digitale)** à la FST de Settat.
 
-- DESCRIPTION DU PROJET 
-BookFlow est un moteur de base de données relationnelle conçu pour gérer 
-le cycle de vie complet d'une librairie moderne. Ce projet met en œuvre 
-des concepts avancés d'ingénierie de données : intégrité transactionnelle 
-(ACID), sécurité RBAC, optimisation par indexation B-Tree et logique métier 
-embarquée via des procédures stockées et triggers.
+L'objectif est de démontrer la maîtrise du cycle de vie de la donnée : de la modélisation conceptuelle à l'optimisation des performances et la sécurisation des accès.
 
-- DOCUMENTATION JOINTE
-L'analyse théorique complète, incluant la modélisation (3NF), l'étude des 
-performances, les architectures NoSQL, Cloud DBaaS et Big Data, se trouve 
-dans le document : 
-"Cours BDD Yasser Sidane.pdf" (99 pages).
+## 🏗️ Piliers de l'Architecture
+Le système repose sur trois piliers fondamentaux étudiés durant le module :
+1. **Modélisation Robuste** : Architecture en **3ème Forme Normale (3NF)** pour garantir l'intégrité et éliminer la redondance.
+2. **Intelligence Métier** : Logique embarquée via des **Procédures Stockées** et des **Triggers** (gestion des quotas d'emprunt et automatisation des stocks).
+3. **Gouvernance & Sécurité** : Contrôle d'accès basé sur les rôles (**RBAC**).
 
-- STRUCTURE DES SCRIPTS SQL 
-Pour garantir le respect des contraintes d'intégrité (Clés étrangères), 
-les scripts doivent être exécutés dans l'ordre numérique suivant :
+## 📂 Inventaire des Livrables & Ordre d'Exécution
+Pour reconstruire l'environnement complet et respecter les contraintes d'intégrité (Clés étrangères), veuillez exécuter les scripts dans l'ordre numérique suivant :
 
-01_Schema_Creation.sql  : Création de la base et des tables (Normalisation 3NF).
-02_Business_Logic.sql   : Procédures stockées et Triggers (Intelligence métier).
-03_Security_RBAC.sql    : Gestion des rôles et des privilèges (Gouvernance).
-04_Optimizations.sql    : Création des index pour la performance (B-Tree).
-05_Sample_Data.sql      : Jeu de données réel et scénarios de test.
+### 🛠️ Scripts SQL (Moteur de Données)
+| Ordre | Fichier | Rôle Technique |
+| **1** | `01_Schema_Creation.sql` | **DDL** : Création de la structure, des tables et des contraintes. |
+| **2** | `02_Business_Logic.sql` | **Intelligence** : Procédures stockées (`sp_effectuer_emprunt`) et Triggers. |
+| **3** | `03_Security_RBAC.sql` | **Sécurité** : Configuration des rôles (`admin`, `bibliothecaire`, `lecteur`). |
+| **4** | `04_Optimizations.sql` | **Performance** : Indexation **B-Tree** stratégique. |
+| **5** | `05_Sample_Data.sql` | **Validation** : Jeu de données de test et scénarios réels. |
 
-- INSTRUCTIONS D'INSTALLATION 
-1. Ouvrez votre environnement MySQL (MySQL Workbench ou CLI).
-2. Créez une nouvelle connexion ou utilisez l'instance locale.
-3. Exécutez les fichiers un par un dans l'ordre (01 à 05) :
-   Exemple en ligne de commande : 
-   mysql> source 01_Schema_Creation.sql;
-   ... (jusqu'au 05)
+### 📄 Documentation & Synthèse
+* **`00.Fiche_Synthese_SITD_Yasser_Sidane.pdf`** : Résumé exécutif du projet (À lire en priorité).
+* **`01.Cours_BDD_Yasser_Sidane_GRP3B.pdf`** : Support théorique approfondi (99 pages).
+* **`02.Compte_Rendu_BookFlow_Yasser_Sidane.pdf`** : Rapport technique de conception.
 
-- VÉRIFICATION DU FONCTIONNEMENT 
-Une fois l'installation terminée, vous pouvez tester la logique métier 
-de sécurité (quota de 5 livres maximum par adhérent) avec la commande :
+---
 
-   CALL sp_effectuer_emprunt(1, 1);
+## 🎙️ Innovation & Multimédia
+Pour illustrer la dimension **Transformation Digitale**, le projet inclut :
+* 🎬 **Vidéo de Démonstration** : Présentation du fonctionnement du système (`Presentation_SQL_Yasser_Sidane.mp4`).
+* 🎙️ **Podcast d'Expertise** : Analyse des enjeux stratégiques de la donnée (`Expertise_Architecture_Donnees_Yasser_Sidane.m4a`).
 
-Cela valide simultanément la procédure de vérification, la mise à jour 
-du stock et la création du prêt dans la table EMPRUNTER.
+> 🔗 Accéder au dossier complet sur Google Drive** : 
 
-- ARCHITECTURE TECHNIQUE 
-- SGBD cible : MySQL 8.0+
-- Modélisation : 3ème Forme Normale (3NF)
-- Sécurité : Role-Based Access Control (RBAC)
-- Performance : Optimisation des requêtes via Indexation B-Tree.
 
-Année Universitaire : 2025 - 2026
+## 🧪 Test de Validation
+Une fois les scripts exécutés, vous pouvez tester la logique métier (quota de 5 livres maximum par adhérent) avec cette commande :
