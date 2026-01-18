@@ -33,8 +33,9 @@ Pour illustrer la dimension **Transformation Digitale**, le projet inclut :
 * 🎬 **Vidéo de Démonstration** : Présentation du fonctionnement du système (`Presentation_SQL_Yasser_Sidane.mp4`).
 * 🎙️ **Podcast d'Expertise** : Analyse des enjeux stratégiques de la donnée (`Expertise_Architecture_Donnees_Yasser_Sidane.m4a`).
 
-> 🔗 Accéder au dossier complet sur Google Drive** : 
+> 🔗 Accéder au dossier complet sur Google Drive** : https://drive.google.com/drive/folders/1OFWf-Bu2gvZXlIWavB3OGw2IwRplYTR_?usp=sharing
 
 
 ## 🧪 Test de Validation
 Une fois les scripts exécutés, vous pouvez tester la logique métier (quota de 5 livres maximum par adhérent) avec cette commande :
+
